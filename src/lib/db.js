@@ -1,10 +1,9 @@
-// src/lib/db.js
-import { openDB } from "idb";
 
+import { openDB } from "idb";
 let dbPromise;
 
 export function getDB() {
-  if (typeof window === "undefined") return null; // SSR guard
+  if (typeof window === "undefined") return null;
 
   if (!dbPromise) {
     dbPromise = openDB("video-gallery", 1, {

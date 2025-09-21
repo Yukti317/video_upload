@@ -3,10 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import Image from "next/image";
 import { useEffect, useState } from "react";
-import { addVideo, getAllVideos, deleteVideo } from "@/lib/db";
-
+import { addVideo, getAllVideos } from "@/lib/db";
 
 export default function Home() {
   const [videos, setVideos] = useState([]);
